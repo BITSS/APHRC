@@ -58,6 +58,9 @@
 % This is only inserted into the PDF information catalog. Can be left
 % out. 
 
+ \pgfdeclareimage[height=2cm]{university-logo}{C:/Users/garret/GoogleDrive/CEGA/CEGA-Programs/BITSS/Supporting-Material-Slides/APHRC/Images/BITSSlogo.png}
+ \logo{\pgfuseimage{university-logo}}
+ 
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
 %\AtBeginSubsection[]
@@ -80,14 +83,14 @@
 
 %\begin{frame}{Outline}
 %  \tableofcontents
-  % You might wish to add the option [pausesections]
+   %You might wish to add the option [pausesections]
 %\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Outline}
 
 \begin{frame}[label=main]{Outline}
-What have we learned?
+Overview
 \begin{itemize}
 \item
 Publication bias is a problem.
@@ -103,7 +106,7 @@ What should we include in our PAP, and where should we post it?
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Publication Bias}
+\section*{Publication Bias}
 \begin{frame}{Publication Bias}%{Subtitles are optional.}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
@@ -156,9 +159,19 @@ If we only write up/publish significant results, and we have no record of all th
    \item Newer to social sciences, but good locations for several fields.
    \item AEA registry, currently only for RCTs. \url{http://socialscienceregistry.org}
    \item
-   ``J-PAL supports the American Economic Association's (AEA) registry for randomized controlled trials in economics (http://socialscienceregistry.org). It is a free, easy-to-use database that makes access to trial results more transparent, aims to address the growing number of requests for registration by funders and referees, and helps solve the problem of publication bias by providing a single place where all trials are registered in advance of their start. As of May 31, 2015, the AEA Registry had a total of 379 registered controlled trials in 70 different countries. See how the registry continues to grow below.'' \hyperlink{AEAreg}{\beamerbutton{Link}}
+   ``J-PAL supports the American Economic Association's (AEA) registry for randomized controlled trials in economics (http://socialscienceregistry.org). It is a free, easy-to-use database that makes access to trial results more transparent, aims to address the growing number of requests for registration by funders and referees, and helps solve the problem of publication bias by providing a single place where all trials are registered in advance of their start. As of May 31, 2015, the AEA Registry had a total of 379 registered controlled trials in 70 different countries. See how the registry continues to grow below.'' 
  \end{itemize}
  \end{frame}
+ { % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain, label=AEAreg]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]{AEAreg.png}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
  \begin{frame}{Registrations-Social Sciences}
  \begin{itemize}
@@ -179,17 +192,7 @@ If we only write up/publish significant results, and we have no record of all th
    \end{itemize}  
 \end{frame}
 
-{ % all template changes are local to this group.
-    \setbeamertemplate{navigation symbols}{}
-    \begin{frame}[plain, label=AEAreg]
-         \begin{tikzpicture}[remember picture,overlay]
-            \node[at=(current page.center)] {
-                \includegraphics[width=\paperwidth]{AEAreg.png}
-            };
-        \end{tikzpicture}
-        \hyperlink{regmain}{\beamerbutton{main}}
-     \end{frame}
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 { % all template changes are local to this group.
@@ -211,6 +214,84 @@ If we only write up/publish significant results, and we have no record of all th
         \end{tikzpicture}
      \end{frame}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{P-Hacking}
+\begin{frame}{P-Hacking}
+\begin{itemize}
+\item
+Also called fishing, researcher degrees of freedom, data mining, data massaging, data dredging, or specification searching.
+\item
+Definition: flexibility in data analysis allows portrayal of \textit{anything} as below an arbitrary p-value threshhold; significance loses its meaning.
+\item
+Not something only evil people do. It can be subconcious---humans are really good at motivated reasoning.
+\item
+Not just that, we make completely reasonable but data-dependent decisions (Gelman, Loken 2013/2014 ``Garden of Forking Paths'')
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{P-Hacking}
+Do people actually do this? (John, Loewenstein, Prelec 2011)
+\end{frame}
+
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{Prelec1.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+     
+     \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{Prelec2.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+     
+     \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{Prelec3.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+     
+     \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{PrelecFig1.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+ \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{PrelecFig2.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+
+\begin{frame}{P-Hacking}
+\begin{itemize}
+\item
+``Science isn't Broken'' ---538 journalism piece with interactive demo \href{http://fivethirtyeight.com/features/science-isnt-broken}{\beamerbutton{Link}}
+\item
+Listening to the Beatles' ``When I'm Sixty-Four'' makes you younger. (Simmons, Nelson, Simonsohn 2011)
+\item
+Inordinately many .049 p-values, and indordinately few .051's; 10-20\%. (Brodeur et al 2015, ``Star Wars'')
+\item 
+Political ideologues literally see in black and white (Nosek, Spies, Motyl 2012)
+\end{itemize}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pre-Analysis Plan}
 \begin{frame}{Pre-Analysis Plan}
@@ -289,29 +370,29 @@ From 3ie: ``A pre-analysis plan is a detailed description of the analysis to be 
 \end{enumerate}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Simmons, Nelson, Simonsohn (2011)}
-Reporting standards, but related.
-\pause
-\begin{enumerate}
-\item
-  Authors must decide the rule for terminating data collection before
-  data collection begins and report this rule in the article.
-\item
-  Authors must collect at least 20 observations per cell or else provide
-  a compelling cost-of-data-collection justification.
-\item
-  Authors must list all variables collected in a study.
-\item
-  Authors must report all experimental conditions, including failed
-  manipulations.
-\item
-  If observations are eliminated, authors must also report what the
-  statistical results are if those observations are included.
-\item
-  If an analysis includes a covariate, authors must report the
-  statistical results of the analysis without the covariate.
-\end{enumerate}
-\end{frame}
+%\begin{frame}{Simmons, Nelson, Simonsohn (2011)}
+%Reporting standards, but related.
+%\pause
+%\begin{enumerate}
+%\item
+%  Authors must decide the rule for terminating data collection before
+%  data collection begins and report this rule in the article.
+%\item
+%  Authors must collect at least 20 observations per cell or else provide
+%  a compelling cost-of-data-collection justification.
+%\item
+%  Authors must list all variables collected in a study.
+%\item
+%  Authors must report all experimental conditions, including failed
+%  manipulations.
+%\item
+%  If observations are eliminated, authors must also report what the
+%  statistical results are if those observations are included.
+%\item
+%  If an analysis includes a covariate, authors must report the
+%  statistical results of the analysis without the covariate.
+%\end{enumerate}
+%\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Examples}
 Wide range of when to write and how detailed to make the plan. At the extreme level of detail you would have your entire code already written before you got any data.
@@ -353,17 +434,30 @@ Casey, Glennerster, Miguel, ``\href{http://www.nber.org/data-appendix/w17012/GBF
 	\end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{OSF Demo}
-\begin{itemize}
-\item Create a Project.
-\item Add a collaborator.
-\item Upload a file.
-\item Edit and save the file, without changing the name.
-\item Upload the file again.
-\item Link project to GitHub repo.
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Design-Based Publication}
+AKA Registered Reports, moves peer review before data gathering, results, and analysis.
+
+\begin{enumerate}[<.->]
+\item Design a project
+\item Submit
+\item Reviewed based on importance of question and quality of design
+\item Get in-principle acceptance
+\item Follow through, and nulls get published
+\end{enumerate}
+\href{https://osf.io/8mpji/wiki/home/}{14 Journals, 4 more with Special Issues \beamergotobutton{Link}}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{OSF Demo}
+%\begin{itemize}
+%\item Create a Project.
+%\item Add a collaborator.
+%\item Upload a file.
+%\item Edit and save the file, without changing the name.
+%\item Upload the file again.
+%\item Link project to GitHub repo.
+%\end{itemize}
+%\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -375,50 +469,28 @@ Casey, Glennerster, Miguel, ``\href{http://www.nber.org/data-appendix/w17012/GBF
  \item
   Include a pre-analysis plan to reduce researcher degrees of freedom.
  \item
-  Register in most appropriate site for your work, OSF will hold anything, and link to your entire workflow.
+  Register in most appropriate site for your work. 
+  \begin{itemize}
   \item
-  Use version control (GitHub, BitBucket, etc.).
+  AEA
   \item
-  Share your data (Harvard Dataverse--Alex Wais next).
+  EGAP
+  \item
+  RIDIE
+  \item
+  OSF will hold anything, and link to your entire workflow.
+ \end{itemize}
+  %\item
+  %Use version control (GitHub, BitBucket, etc.).
+  %\item
+  %Share your data (Harvard Dataverse--Alex Wais next).
 \end{itemize}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{P-Hacking}
-\begin{frame}[label=supplementalhack]{Supplemental: P-Hacking}
-\begin{itemize}
-\item
-Also called fishing, researcher degrees of freedom, data mining, data massaging, data dredging, or specification searching.
-\item
-Definition: flexibility in data analysis allows portrayal of \textit{anything} as below an arbitrary p-value threshhold; significance loses its meaning.
-\item
-Not something only evil people do. It can be subconcious---humans are really good at motivated reasoning.
-\item
-Not just that, we make completely reasonable but data-dependent decisions (Gelman, Loken 2013/2014 ``Garden of Forking Paths'')
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Supplemental: P-Hacking}
-\begin{itemize}
-\item
-Do people actually do this? (Previous---John, Loewenstein, Prelec 2011)
-\item
-Listening to the Beatles' ``When I'm Sixty-Four'' makes you younger. (Simmons, Nelson, Simonsohn 2011)
-\item
-Inordinately many .049 p-values, and indordinately few .051's; 10-20\%. (Brodeur et al 2015, ``Star Wars'')
-\item 
-Political ideologues literally see in black and white (Nosek, Spies, Motyl 2012)
-\end{itemize}
-
-\vspace{0.25in}
-Back to \hyperlink{main}{\beamerbutton{main}}.
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
