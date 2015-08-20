@@ -111,13 +111,6 @@
   \titlepage
 \end{frame}
 
-\begin{frame}
-\includegraphics[height=0.75in]{BITSSlogo.PNG}
-
- \url{bitss.org}
- 
-\end{frame}
-
 \begin{frame}{Outline}
   \tableofcontents
   % You might wish to add the option [pausesections]
@@ -140,6 +133,7 @@
  \item Specification Searching (see previous talk)
  \item Data not available
  \item Code not available/unintelligible
+ \item Code and data cannot reproduce original results
  \end{itemize}
 \end{frame}
 
@@ -161,10 +155,6 @@
 \item Study Registry (see previous talk)
 \item Pre-Analysis Plan (see previous talk)
 \item Reproducible Workflow
- \begin{itemize}
- \item Literate Programing 
- \item Data Sharing
- \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -173,17 +163,34 @@
 \subsection{Workflow}
 \begin{frame}{Reproducible Workflow}
  \begin{itemize}
+ \item Literate Programing 
  \item R Markdown and \href{http://rstudio.com}{R Studio} to write dynamic documents.
  \item Version control with \href{http://www.github.com}{Github} or \href{http://osf.io}{OSF}. 
- \item Literate Programing
-  \begin{itemize}
-   \item Writing code to be read by a human instead of a machine. (Loosely: commenting the hell out of it.)
-  \end{itemize} 
  \item Data Sharing
  \begin{itemize}
  \item \href{http://www.thedata.org}{Harvard's Dataverse}
  \end{itemize}
 \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Literate Programming}
+\begin{frame}{Literate Programming}
+First, you should be \textit{programming}. Working in Excel is not reproducible.
+Reinhart and Rogoff. If you are using SPSS, there is a `syntax' command to record all the commands you run. Similarly in Stata, commandlog.
+
+Better is to write scripts. R, Stata, SAS, Python, whatever. Open source has some advantages (being free, for one) but you're going to use what everyone in your field uses.
+
+Second, literate programming. Write code to be read by a human being, with the code for the computer secondary.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Version Control}
+\begin{frame}{Version Control}
+Use version control.
+
+DCVS distributed version control system
+
+gentzkow and shapiro's RA guide
+
 \end{frame}
 
 { % all template changes are local to this group.
@@ -191,12 +198,19 @@
     \begin{frame}[plain]
         \begin{tikzpicture}[remember picture,overlay]
             \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{github-logo-transparent.jpg}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
                 \includegraphics[height=\paperheight]{OSFnow.PNG}
             };
         \end{tikzpicture}
      \end{frame}
- % all template changes are local to this group.
-    \setbeamertemplate{navigation symbols}{}
+ 
     \begin{frame}[plain]
         \begin{tikzpicture}[remember picture,overlay]
             \node[at=(current page.center)] {
@@ -205,6 +219,34 @@
         \end{tikzpicture}
      \end{frame}
 }
+
+\begin{frame}
+GitHub and OSF Examples
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dynamic Documents}
+\begin{frame}{Dynamic Documents}
+A dynamic document includes your data, code, analysis, and output all in one place. Fully automated, you can guarantee no mistakes from copying and pasting.
+
+Do this with R Markdown and R Studio or Ketchup in Stata.
+\end{frame}
+
+\begin{frame}
+R Studio Example
+
+Stata Example
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Sharing}
+\begin{frame}{Data Sharing}
+Make all your data and code publicly available.
+
+Put it in a place where people can find it. 
+
+ For APHRC that might be the APHRC repository.
+\end{frame} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
