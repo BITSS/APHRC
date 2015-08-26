@@ -54,7 +54,7 @@
 {Data Sharing and Replication}
 
 \subtitle
-{Transparency} % (optional)
+{Enabling Reproducible Research} % (optional)
 
 \author[Christensen] % (optional, use only with lots of authors)
 {Garret Christensen\inst{1}}
@@ -126,50 +126,137 @@
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Replication}
-\begin{frame}{Replication}
-\begin{enumerate}[<.->]
- \item The Problem	(JMCB Project)
- \item Project Protocol, Reporting Standards
- \item Organizing Workflow
- \item Code \& Data Sharing
-\end{enumerate}
+\begin{frame}{Introduction}
+Science advances by building on the work of others. 
+\vspace{0.5in}
+
+
+\begin{quote}
+If I have seen further, it is by standing on the shoulders of giants
+\end{quote}
+\begin{flushright}
+--Sir Isaac Newton, 1676
+\end{flushright}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Problems}
+What prevents us from building on others' work?
+\begin{itemize}[<.->]
+ \item Data not shared
+ \item Analysis not shared
+ \item Methods/protocol not shared 
+\end{itemize}
 \end{frame}
 
-\subsection*{Project Protocol, Reporting Standards}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Solutions}
+What enables us to build on others' work?
+\begin{itemize}[<.->]
+ \item Data shared in trusted public repository
+ \item Code/Analysis shared in trusted public repository
+ \item Methods/protocol follow appropriate reporting standard
+ \item Also: findings/scholarly publications available (open access)
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project Protocol, Reporting Standards}
 \begin{frame}[<.->]{Project Protocol, Reporting Standards}
- Make sure you report everything another researcher would need to replicate your research.
- \begin{itemize}
- \item Find the appropriate reporting standard for your field and follow it: \url{http://www.equator-network.org/}
-\item Report the nuts and bolts of the project implementation in a detailed protocol: \url{http://www.spirit-statement.org}
+ Make sure you report everything another researcher would need to replicate your research, including the exact methods.
+ \pause
+ 
+ What to report (following medicine):
+\begin{itemize}
+\item Find the appropriate reporting standard for your field and follow it.
+\item Enhancing the QUAlity and Transparency Of health Research (\href{http://www.equator-network.org}{EQUATOR Network})
+\item The most widely-adopted standard: \href{http://www.consort-statement.org}{Consolidated Standards of Reporting Trials (CONSORT)}. 
+\item Standard Protocol Items: Recommendations for Interventional Trials (\href{http://www.spirit-statement.org}{SPIRIT Statement}).
 \end{itemize}
 \end{frame}
 
- \subsection*{Workflow}
- \begin{frame}{Workflow}
-``Reproducibility is just collaboration with people you don't know,
-including yourself next week''
+\begin{frame}{Project Protocol, Reporting Standards}
+Where to report:
 
----Philip Stark, UC Berkeley Statistics
+If not in the methods section of the article (of limited length), supplementary online appendix linked with article or in trusted digital repository.
 \end{frame}
-\begin{frame}{Workflow}
-
- Practical coding and organizational suggestions
- \begin{itemize}
- \item Long (2008) \textit{The Workflow of Data Analysis Using Stata}
- \begin{itemize}
- 	\item Making any changes to a file that has been posted/shared means it gets a new name.
- 	\item Use version commands to ensure others get same results.
-  \end{itemize}
- \item Literate programming (extensive commenting, making the aim of code reading by a human)
- \item R Markdown, integration of analysis and output.
-\end{itemize}
-\end{frame}
-
-\subsection*{Data Sharing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data Sharing}
 \begin{frame}{Data Sharing}
-Post your code and your data in a trusted public repository.
+To build on the work of others, data must be shared.
+
+Data sharing is associated with more citations (causality unclear). \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0000308}{Piwowar et al. 2007} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Data Sharing}
+History in Economics:
+\begin{itemize}
+\item  \href{http://www.jstor.org/stable/1806061}{Journal of Money Credit and Banking Project}: Dewald, Thursby, Anderson \textit{AER} 1986. 
+\begin{itemize}
+\item Low response rate to requests to share data.
+\item Attempted to reproduce 9 papers, problems with all (some minor) even with help of original authors.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]{JMCBTable1.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Data Sharing}
+History in Economics:
+\begin{itemize}
+\item  \href{http://www.jstor.org/stable/1806061}{Journal of Money Credit and Banking Project}: Dewald, Thursby, Anderson \textit{AER} 1986. 
+ \begin{itemize}
+ \item Low response rate to requests to share data.
+ \item Attempted to reproduce 9 papers, problems with all (some minor) even with help of original authors.
+ \end{itemize}
+\item \href{https://research.stlouisfed.org/publications/review/94/11/Replication_Nov_Dec1994.pdf}{A Decade After JMCB}: Anderson and Dewald, St Louis Fed 1994.
+ \begin{itemize}
+ \item Repeated similar experiment
+ \item Similar bleak results
+ \end{itemize}
+ \pause
+\item Verifying the Solution from a Nonlinear Solver, McCullough and Vinod, \textit{AER} 2003.
+ \begin{itemize}
+ \item Different software programs get you different answers.
+ \item But finally change---\textit{AER} institutes data sharing requirement. \href{https://www.aeaweb.org/aer/data.php}{\beamerbutton{Policy}}
+ \end{itemize} 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%
+
+
+\begin{frame}{Data Sharing}
+How are we doing as a discipline?
+\begin{itemize}
+\item \textit{AER} internal review generally positive (\href{https://www.aeaweb.org/aer/2011_Data_Compliance_Report.pdf}{Glandon 2010})
+
+\item Many, including McCullough, still skeptical of the ability to reproduce (\href{http://econjwatch.org/articles/got-replicability-the-journal-of-money-credit-and-banking-archive}{Econ Journal Watch, 2007})
+
+\item Though \textit{AER}, all AEA, and other top journals have a good policy, enforcement is limited, and shared data is often only the ``analysis'' data instead of raw data, and \textit{QJE} has no policy whatsoever.
+
+\item A study by the Replication Network shows that fewer than 27 journals regularly publish data, only 10 explicitly state they publish replications. (\href{http://econjwatch.org/articles/replications-in-economics-a-progress-report}{Duvendack et al 2015})
+
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Data Sharing}
+Why share your data in a trusted public repository?
 \begin{itemize}[<.->]
 \item
 Find the appropriate repository: \url{http://www.re3data.org/}
@@ -182,6 +269,45 @@ Repositories will store your data in a non-proprietary format that won't become 
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Data Sharing}
+Data repositories
+
+Harvard's Dataverse
+
+Check the journal
+\end{frame}
+
+\begin{frame}{APHRC Repository}
+APHRC has its own repository. You should use it.
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Replication}
+\begin{frame}{Replication}
+Define Replication
+
+Michael Clemens
+\end{frame}
+
+
+\begin{frame}{Replication}
+How to do a replication
+\end{frame}
+
+
+\begin{frame}{Replication}
+Encourage it, make it publishable
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Share your data
+\item Replicate
+\end{itemize}
+\end{frame}
 
 \end{document}
 
