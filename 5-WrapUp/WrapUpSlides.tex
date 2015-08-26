@@ -13,6 +13,7 @@
 
 \usepackage{tikz}
 \usepackage{graphicx}
+\graphicspath{{C:/Users/garret/GoogleDrive/CEGA/CEGA-Programs/BITSS/Supporting-Material-Slides/APHRC/Images/}}
 \usepackage[english]{babel}
 \usepackage{wrapfig}
 % or whatever
@@ -41,14 +42,14 @@
 \institute[University of California Berkeley] % (optional, but mostly needed)
 {
   \inst{1}%
-  Berkeley Initiative for Transparency in the Social Sciences\\
-  UC Berkeley
+  UC Berkeley: Berkeley Initiative for Transparency in the Social Sciences\\
+  Berkeley Institute for Data Science
   }
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[BITSS2015] % (optional, should be abbreviation of conference name)
-{BITSS Summer Institute 2015}
+\date[APHRC] % (optional, should be abbreviation of conference name)
+{APHRC, Summer 2015}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -57,14 +58,12 @@
 % This is only inserted into the PDF information catalog. Can be left
 % out. 
 
-
+\pgfdeclareimage[height=2cm]{university-logo}{C:/Users/garret/GoogleDrive/CEGA/CEGA-Programs/BITSS/Supporting-Material-Slides/APHRC/Images/BITSSlogo.png}
+ \logo{\pgfuseimage{university-logo}}
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
-
- \pgfdeclareimage[height=2cm]{university-logo}{BITSSlogo.png}
- \logo{\pgfuseimage{university-logo}}
 
 
 
@@ -114,69 +113,7 @@
  \end{itemize}
 \end{frame} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Ethical Research}
-\begin{frame}{Ethical Research}
-\begin{itemize}
-\item
-Transparency is part of being an ethical researcher. 
-\item
-Fraud exists (Simonsohn 2013), but mostly we should admit that we're human, subject to bias and motivated reasoning, transparency can help with this (Nosek, Spies, Motyl 2012).
-\item
-Since a lot of us run experiments, we should take IRBs seriously as part of transparency (Ch. 11--13 Morton \& Williams 2010, Desposato 2014). 
-\end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Study Design and Power}
-\begin{frame}{Study Design and Power}
-\begin{itemize}[<.->]
-\item
-Adequately power trials to help prevent spurious significant results. 
-\item
-Practical suggestions:
-\begin{itemize}
-\item
-Collaborate with other labs to mutually run each others' experiments (Open Science Collaboration 2014).
-\item
-Maximize power subject to budget constraint by adjusting expensive treatment arm (relative) size (Duflo, Glennerster, Kremer 2007). 
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Publication Bias}
-\begin{frame}{Publication Bias}%{Subtitles are optional.}
-  % - A title should summarize the slide in an understandable fashion
-  %   for anyone how does not follow everything on the slide itself.
-  Existence of the problem:
-  \begin{itemize}[<.->]
-  \item
- Effect sizes diminish with sample size (Gerber, Green, Nickerson 2001)
-  \item
-  There is a higher fraction of rejected hypothesis tests in social compared to hard sciences (Fanelli 2010).
-  \item
-  	Published null results are disappearing over time, in all disciplines (Fanelli 2011). 
-  \item
-  	Data on the complete set of experiments run shows strong results are 40pp more likely to be published, and 60pp more likely to be written up. The file drawer problem is large. (Franco, Malhotra, Simonovits 2014)
-  	\item
-  	If we only write up/publish significant results, and we have no record of all the insignificant results, we have no way to tell if our `significant' results are real, or if they're the 5\% we should expect due to noise.
-  \end{itemize}
-\end{frame}
-
-%{ % all template changes are local to this group.
-%    \setbeamertemplate{navigation symbols}{}
-%    \begin{frame}[plain]
-%        \begin{tikzpicture}[remember picture,overlay]
-%            \node[at=(current page.center)] {
-%                \includegraphics[height=\paperheight]{TurnerFigure1.PNG}
-%            };
-%        \end{tikzpicture}
-%     \end{frame}
-%}
-
-%\begin {frame}{Publication Bias}
-%\end{frame}
 
 \subsubsection*{Registrations}
 \begin{frame}{Registration}
@@ -236,77 +173,6 @@ From 3ie: ``A pre-analysis plan is a detailed description of the analysis to be 
 \end{itemize}
 \end{frame}
 
-%\begin{frame}{Origin: FDA's Guidance for Industry}
-%``E9 Statistical Principles for Clinical Trials'' (1998)
-%\href{http://www.fda.gov/downloads/drugs/guidancecomplianceregulatoryinformation/guidances/ucm073137.pdf}{\beamergotobutton{Link}}
-%\S V Data Analysis Considerations
-%\begin{enumerate}
-%\item Prespecification of the Analysis
-%\item Analysis Sets
-%\item Missing Values and Outliers
-%\item Data Transformation
-%\item Estimation, Confidence Intervals, and Hypothesis Testing
-%\item Adjustment of Significance and Confidence Levels
-%\item Subgroups, Interactions, and Covariates
-%\item Integrity of Data and Computer Software Validity
-%\end{enumerate}
-%\end{frame}
-
-
-%\begin{frame}{Glennerster, Takavarasha Suggestions}
-%\textit{Running Randomized Evaluations}
-%\begin{enumerate}[<.->]
-%\def\labelenumi{\arabic{enumi}.}
-%\item
-%  the main outcome measures,
-%\item
-%  which outcome measures are primary and which are secondary,
-%\item
-%  the precise composition of any families that will be used for mean effects analysis,
-%  \begin{itemize}
-%  \item Explain mean effects, FWER, FDR using Anderson (JASA 2008).
-%  \end{itemize}
-%\item
-%  the subgroups that will be analyzed,
-%\item
-% the direction of expected impact if we want to use a one-sided test, and
-%\item the primary specification to be used for the analysis.
-%\end{enumerate}
-%\end{frame}
-
-%\begin{frame}{McKenzie Suggestions}
-%\href{http://blogs.worldbank.org/impactevaluations/a-pre-analysis-plan-checklist}{World Bank Development Impact Blog}
-
-%\begin{enumerate}[<.->]
-%\item
-%  Description of the sample to be used in the study
-%\item  Key data sources
-%\item Hypotheses to be tested throughout the causal chain
-%\item
-%  Specify how variables will be constructed
-%\item  Specify the treatment effect equation to be estimated
-%\item  What is the plan for how to deal with multiple outcomes and multiple
-%  hypothesis testing?
-%\item  Procedures to be used for addressing survey attrition
-%\item  How will the study deal with outcomes with limited variation?
-%\item  If you are going to be testing a model, include the model
-%\item  Remember to archive it
-%\end{enumerate}
-%\end{frame}
-
-%\begin{frame}{Examples}
-%\begin{itemize}[<.->]
-%\item J-PAL Hypothesis Registry (11), see \url{http://www.povertyactionlab.org/Hypothesis-Registry}
-
-%6 published papers:
-%\begin{itemize}
-%\item Sierra Leone CDD, Oregon Medicare, Turkey Job Training, El Salvador TOMS, two in Indonesia (Olken et al.)
-%\end{itemize}
-%\item Psychology: \href{http://pss.sagepub.com/content/26/2/249}{Hawkins, Fitzgerald, Nosek---Conception Risk and Prejudice}
-%\end{itemize} 
-%\vspace{0.25in}
-%Wide range of when exactly to write and how detailed to make the plan. At the extreme level of detail you would have your entire code already written before you got any data.
-%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Replication}
@@ -319,57 +185,13 @@ From 3ie: ``A pre-analysis plan is a detailed description of the analysis to be 
 \end{enumerate}
 \end{frame}
 
-\subsubsection*{Project Protocol, Reporting Standards}
-\begin{frame}[<.->]{Project Protocol, Reporting Standards}
- Make sure you report everything another researcher would need to replicate your research.
- \begin{itemize}
- \item Find the appropriate reporting standard for your field and follow it: \url{http://www.equator-network.org/}
-\item Report the nuts and bolts of the project implementation in a detailed protocol: \url{http://www.spirit-statement.org}
-\end{itemize}
-\end{frame}
-
- \subsubsection*{Workflow}
- \begin{frame}{Workflow}
-``Reproducibility is just collaboration with people you don't know,
-including yourself next week''
-
----Philip Stark, UC Berkeley Statistics
-
-\vspace{0.15in}
-
-Practical coding and organizational suggestions
- \begin{itemize}
- \item Long (2008) \textit{The Workflow of Data Analysis Using Stata}
- \begin{itemize}
- 	\item Making any changes to a file that has been posted/shared means it gets a new name.
- 	\item Use version commands to ensure others get same results.
-  \end{itemize}
- \item Literate programming (extensive commenting, making the aim of code reading by a human)
- \item Dynamic Documents (R Markdown): integration of analysis and output.
-\end{itemize}
-\end{frame}
-
-\subsubsection*{Data Sharing}
-\begin{frame}{Data Sharing}
-Post your code and your data in a trusted public repository.
-\begin{itemize}[<.->]
-\item
-Find the appropriate repository: \url{http://www.re3data.org/}
-\item
-Repositories will last longer than your own website.
-\item
-Repositories are more easily searchable by other researchers.
-\item
-Repositories will store your data in a non-proprietary format that won't become obsolete.
-\end{itemize}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Meta-Research Grant Initiative}
 \begin{frame}{Meta-Research Grant Initiative}
 Funding directed to methodological research projects that advance understanding and design of new approaches for reproducibility and reliability. (\$15K-\$30K)
 \begin{itemize}
 \item Laura and John Arnold Foundation
-\item RFP this summer!
+\item RFP available now! \href{http://www.bitss.org/ssmart/}{\beamerbutton{Link}}
 \item Analysis of various pre-specification practices, including impacts on reported research findings;
 \item Application of specification curves to existing influential studies in economics;
 \item Experiments involving the research community to reveal the effects of a researchers’ degrees of freedom on study outcomes;
@@ -402,14 +224,14 @@ Focusing on young scholars, this prize will reward graduate students, postdoctor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Developing Country Researcher Transparency}
 \begin{frame}{Open Research from Developing Countries}
-Potential new initiative
+New Initiative
 \begin{itemize}
 \item Incorporate transparency with CEGA, train Developing Country researchers
 \item EASST Scholars/EASST Summit
 \item Training workshops in developing countries 
 
 (Yours?  Let us know!)
-\item More developing country researchers at this institute
+\item More developing country researchers at BITSS Summer Institute
 \item Hewlett Foundation
 \end{itemize}
 
@@ -429,9 +251,11 @@ BITSS collaborates with Center for Open Science to provide free statistical/repr
 \begin{frame}{BITSS Research}
 \begin{itemize}
 \item Christensen, Dafoe, Miguel: Data Sharing and Citations
-\item BITSS Annual Meeting (December, open call)
+\item BITSS Annual Meeting 
+
+(December 10-11, \href{http://www.bitss.org/2015-bitss-annual-meeting/}{\beamerbutton{Open Call for Papers!}})
 \item BITSS-organized session at AEA/ASSA meeting
-\item APPAM, APSA, OpenCon?
+\item APPAM, APSA, MozFest (London)
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -536,9 +360,9 @@ AKA Registered Reports, moves peer review before data gathering, results, and an
 
 \item Guidelines for journals on citation standards, data \& code \& materials sharing, design, registration of study, pre-analysis plan, replication.
 
-\item Forthcoming in \textit{Science} June 26. 
+\item Published in \href{http://www.sciencemag.org/content/348/6242/1422.full}{\textit{Science} June 26}. 
 
-\item 50+ journals endorsed already, more coming.
+\item 510+ journals endorsed already, more coming.
 \end{itemize} 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -567,12 +391,23 @@ AKA Registered Reports, moves peer review before data gathering, results, and an
 \item Spain: Barcelona Graduate School of Economics presentatation on PAP
 \end{itemize}
 \item Organize a conference session?
-\item Stay in touch (awais@berkeley.edu, garret@berkeley.edu). New: Jenn, Shyan.
+\item Stay in touch (garret@berkeley.edu).
 \item Blog for us!
 \item Tweet @UCBITSS!
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Questions?}
+\begin{itemize}
+\item What questions do you have?
+\item Small group activities:
+\begin{itemize}
+\item Draft pre-analysis plan.
+\item Search a registry for an interesting topic.
+\item Search a repository for a paper to replicate.
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 \end{document}
 
